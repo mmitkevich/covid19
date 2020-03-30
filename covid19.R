@@ -32,5 +32,5 @@ for(country in countries)
   img<-d3 %>% gather(stat, value, -date, -x) %>% ggplot(aes(x=date,y=value,colour=stat)) + geom_line() +
     scale_y_log10(labels = unit_format(unit = "K", scale = 1e-3), breaks=pretty_breaks(n=5)) + ggtitle(sprintf("%s: exp(%g+(%g)*x+(%g)*x*x)", country, mc[1],mc[2],mc[3]))
   print(img)
-  ggsave(paste0(country,".png"),plot=img,device=png)
+  ggsave(paste0(country,".png"))
 }
