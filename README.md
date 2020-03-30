@@ -1,6 +1,6 @@
 Stupid quadratic log-regression on covid19 confirmed cases
 
-log(cases) ~ a + b*x + c*x^2
+log(cases) ~ a + b*x + c*x*
 
 where x is number of days since first patient.
 Only days with >= 5K patients were used
